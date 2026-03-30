@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Памятка HR: Высшая Лига (Fixed)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #d4af37;
+            --bg: #020617;
+            --card-w: 280px;
+            --card-h: 400px;
+        }
+
+        body {
+            background: #1a1a1a;
+            font-family: 'Montserrat', sans-serif;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+            color: white;
+        }
+
+        .card {
+            width: var(--card-w);
+            height: var(--card-h);
+            border-radius: 15px;
+            position: relative;
+            background: linear-gradient(135deg, #1e293b 0%, #020617 100%);
+            border: 2px solid rgba(255,255,255,0.1);
+            box-sizing: border-box;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        /* Золотая рамка из дизайна Ролей */
+        .card::after {
+            content: '';
+            position: absolute;
+            top: 10px; left: 10px; right: 10px; bottom: 10px;
+            border: 1px solid var(--gold);
+            border-radius: 10px;
+            opacity: 0.4;
+            pointer-events: none;
+        }
+
+        .content {
+            padding: 22px 22px 15px 22px; /* Уменьшены отступы */
+            z-index: 2;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .side-label {
+            position: absolute;
+            top: 15px; right: 20px;
+            font-size: 0.5rem;
+            color: var(--gold);
+            letter-spacing: 2px;
+            font-weight: 800;
+            opacity: 0.8;
+        }
+
+        .header h1 {
+            font-weight: 800;
+            font-size: 0.85rem;
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin: 0 0 10px 0;
+            border-bottom: 1px solid var(--gold);
+            padding-bottom: 3px;
+            display: inline-block;
+        }
+
+        .section { margin-bottom: 10px; }
+
+        .section-title {
+            font-weight: 700;
+            font-size: 0.65rem;
+            color: var(--gold);
+            text-transform: uppercase;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .item {
+            font-size: 0.65rem; /* Оптимальный размер для печати */
+            line-height: 1.25;
+            color: #e2e8f0;
+            margin-bottom: 5px;
+            display: flex;
+            gap: 8px;
+        }
+
+        .num { color: var(--gold); font-weight: 800; min-width: 12px; }
+
+        .formula-box {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            padding: 8px;
+            border-radius: 6px;
+            text-align: center;
+            font-size: 0.65rem;
+            margin: 5px 0;
+        }
+
+        .highlight { color: var(--gold); font-weight: 700; }
+
+        .footer {
+            margin-top: auto;
+            text-align: center;
+            font-size: 0.45rem;
+            opacity: 0.4;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <span class="side-label">КАРТА 1</span>
+        <div class="content">
+            <div class="header"><h1>ХОД ИГРЫ</h1></div>
+
+            <div class="section">
+                <span class="section-title">Последовательность:</span>
+                <div class="item"><span class="num">1.</span><span><b>Событие:</b> Тяните карту «Карьерный рывок». Эффект действует сразу.</span></div>
+                <div class="item"><span class="num">2.</span><span><b>Запрос:</b> Откройте карту «Запросы бизнеса».</span></div>
+                <div class="item"><span class="num">3.</span><span><b>Решение:</b> Выберите Инструменты и бросьте кубик.</span></div>
+            </div>
+
+            <div class="section">
+                <span class="section-title">Механика успеха:</span>
+                <div class="formula-box">
+                    <span class="highlight">Кубик</span> + <span class="highlight">Карты</span> ≥ <span class="highlight">Сложность</span>
+                </div>
+                <div class="item" style="font-size: 0.6rem; font-style: italic;">
+                    * Если выпало «1» — провал (бонусы карт сгорают).
+                </div>
+            </div>
+
+            <div class="section">
+                <span class="section-title">Действия:</span>
+                <div class="item"><span>• Докупить карту: <span class="highlight">3 жетона</span> бюджета.</span></div>
+                <div class="item"><span>• Обмен: сброс 2-х карт → 1 новая карта.</span></div>
+            </div>
+
+            <div class="footer">HR: ВЫСШАЯ ЛИГА • ПРАВИЛА</div>
+        </div>
+    </div>
+
+    <div class="card">
+        <span class="side-label">КАРТА 2</span>
+        <div class="content">
+            <div class="header"><h1>РЕСУРСЫ</h1></div>
+
+            <div class="section">
+                <span class="section-title">Параметры:</span>
+                <div class="item"><span>● <b>Репутация:</b> Очки победы. Цель — <span class="highlight">50 очков</span>.</span></div>
+                <div class="item"><span>● <b>Бюджет:</b> Валюта для активации карт и оплаты штрафов.</span></div>
+            </div>
+
+            <div class="section">
+                <span class="section-title">Взаимодействие:</span>
+                <div class="item"><span>🤝 <b>Помощь:</b> Можно передавать Бюджет соседу для решения его Запроса.</span></div>
+                <div class="item"><span>🏆 <b>Лидерство:</b> Тот, у кого больше Репутации, ходит первым в раунде.</span></div>
+            </div>
+
+            <div class="section">
+                <span class="section-title">Лимиты и сброс:</span>
+                <div class="item"><span>• В руке не более <b>7 карт</b> в конце хода.</span></div>
+                <div class="item"><span>• Сброшенные карты уходят в «отбой» лицом вверх.</span></div>
+                <div class="item"><span>• Бюджет не сгорает в конце раунда.</span></div>
+            </div>
+
+            <div class="footer">HR: ВЫСШАЯ ЛИГА • РЕГЛАМЕНТ</div>
+        </div>
+    </div>
+
+</body>
+</html>
